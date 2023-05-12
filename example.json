@@ -1,0 +1,12 @@
+{
+    "message": {
+        "subject": "Hello from cf workers",
+        "content": [{
+            "type": "text/plain",
+            "value":"HELLO!"
+        }]
+    },
+    "toAddr": [
+        {"email":"EXAMPLE@EXAMPLE", "name": "EXAMPLE"}],
+    "apiKey": "EXAMPLE"
+}
