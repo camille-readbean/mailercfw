@@ -47,11 +47,19 @@ If the `email` domains of _any recipient_ are not authorized, the worker will re
 
 If the any part of the worker failed, the worker will return a `500 Internal Server Error` response with the error.
 
-If the **POST** request for the email to mailchannel is **sent successfully**, the worker will return a response with a text body containing the response status and message from the MailChannels API _with the status code of the forwarded request_.
+If the **POST** request for the email to mailchannel is **sent successfully**, the worker will return a response with a text body containing the response status and message from the MailChannels API _with the status code of the forwarded request_.  
+i.e. it means the status code of the MailChannels API request is passed through
 
 ----
+Example use (python, see mailcfw_client.py):
+```
+from mailcfw_client import send_email
+send_email(subject='Hi', message='Hi there', email='camille@ruibin.me', name='Camille',
+           mailer_api_key='KEY HERE', mailer_api_user='API USER')
+```
 
-Example use:
+
+Example use (curl):
 ```
 curl -H "content-type: application/json" \
   {workersurl}/mailcfw/{APIUser} \
@@ -102,7 +110,7 @@ export type mailMessage = {
 ```
 
 Deploy:  
-```npx wrangler publish```
+```npx wrangler deploy```
   
 Remember to login first if needed:  
 ```npx wrangler login```
