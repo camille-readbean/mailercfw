@@ -1,4 +1,8 @@
 # Mail, Cloudflare Worker
+
+# :warning: :warning: Mailchannel have end of life Cloudflare workers support :warning: :warning:  
+see:  https://support.mailchannels.com/hc/en-us/articles/26814255454093-End-of-Life-Notice-Cloudflare-Workers  
+
 :warning: THIS IS A TOY PROJECT :warning:  
 
 
